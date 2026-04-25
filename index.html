@@ -423,7 +423,6 @@
   <!-- VISITOR COUNTER -->
   <div class="visitor-bar">
     <span class="visitor-dot"></span>
-    <span class="visitor-label">Total Visitors</span>
     <span class="visitor-divider"></span>
     <span class="visitor-count" id="visitor-count">...</span>
   </div>
@@ -454,25 +453,6 @@
   setInterval(() => {
     document.getElementById('age-text').textContent = calcAge() + ' y/o';
   }, 3600 * 1000);
-
-  // ── VISITOR COUNTER (CounterAPI - free, cross-device) ──
-  // Each unique page load hits the counter and gets the updated total.
-  // Namespace is unique to this profile so it won't clash with others.
-  async function trackVisit() {
-    const el = document.getElementById('visitor-count');
-    try {
-      const res = await fetch('https://api.counterapi.dev/v1/rhntpi-profile/visitors/hit');
-      if (!res.ok) throw new Error();
-      const data = await res.json();
-      const count = data.count;
-      el.textContent = count.toLocaleString('id-ID') + ' Visitor' + (count !== 1 ? 's' : '');
-    } catch {
-      // Fallback: jika API gagal (offline/limit), sembunyikan baris
-      el.textContent = '—';
-    }
-  }
-
-  trackVisit();
 
   // ── PHOTO UPLOAD ──
   document.getElementById('photo-input').addEventListener('change', function () {
