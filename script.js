@@ -99,18 +99,18 @@ Raihan - 27 Juni 2026`,
     // 🧠 QUIZ
     quiz: [
         {
-            question: "Makanan favorit kamu apa?",
-            options: ["Mie ayam", "Bakso", "Nasi kuning", "Seblak"],
+            question: "Makanan favorit lo apa?",
+            options: ["Seblak", "Bakso", "Naskun", "Mie ayam"],
             correct: 0
         },
         {
-            question: "Jam berapa biasanya kamu begadang?",
-            options: ["Jam 10", "Jam 12 malam", "Jam 2 pagi", "Kapan aja"],
+            question: "Jam berapa biasanya lo begadang?",
+            options: ["Jam 2 pagik", "Jam 12 malam", "Jam 10 malam", "Sampe pagi"],
             correct: 2
         },
         {
-            question: "Hobi favorit kamu?",
-            options: ["Gaming", "Nonton", "Baca", "Olahraga"],
+            question: "Hobi favorit lo?",
+            options: ["Gaming", "Nonton drakor", "Baca", "Olahraga"],
             correct: 1
         }
     ]
@@ -259,8 +259,6 @@ function createAboutPage() {
     `;
 
     // Make content scrollable if needed
-    content.style.maxHeight = 'calc(100vh - 100px)';
-    content.style.overflowY = 'auto';
     content.style.paddingRight = '0.5rem';
 
     page.appendChild(content);
@@ -289,9 +287,6 @@ function createTimelinePage() {
 
         <button class="btn" onclick="showPage('gallery')">Photos of Us ➜</button>
     `;
-
-    content.style.maxHeight = 'calc(100vh - 100px)';
-    content.style.overflowY = 'auto';
 
     page.appendChild(content);
     return page;
@@ -339,9 +334,6 @@ function createThingsIKnowPage() {
 
         <button class="btn" onclick="showPage('secret')">Pesan Prom Mi </button>
     `;
-
-    content.style.maxHeight = 'calc(100vh - 100px)';
-    content.style.overflowY = 'auto';
 
     page.appendChild(content);
     return page;
@@ -412,9 +404,6 @@ function createQuizPage() {
 
         <button class="btn" style="margin-top: 1rem;" onclick="showPage('ending')">Lanjott ➜</button>
     `;
-
-    content.style.maxHeight = 'calc(100vh - 100px)';
-    content.style.overflowY = 'auto';
 
     page.appendChild(content);
     return page;
