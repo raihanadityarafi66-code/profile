@@ -40,9 +40,8 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 2rem;
-    text-align: center;
+    justify-content: flex-start; /* FIX: Ubah dari center ke flex-start biar atasnya nggak kedorong */
+    padding: 0; /* FIX: Nol-kan padding di sini karena akan di-handle oleh .page */
     position: relative;
     overflow: hidden;
 }
@@ -135,10 +134,11 @@ html, body {
     height: 100%;
     display: none;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start; /* FIX: Ubah dari center agar kalau kontennya panjang tetep mulai dari atas */
     align-items: center;
     padding: 2rem 1.5rem;
     animation: fadeIn 0.6s ease;
+    overflow-y: auto; /* FIX: Tambahkan ini agar aman bisa di-scroll di HP apapun */
 }
 
 .page.active {
@@ -151,7 +151,8 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    margin: auto 0; /* FIX: Tambahkan ini supaya konten yg pendek (kayak "Welcome") tetep rapi di tengah layar */
     gap: 1.5rem;
 }
 
@@ -168,6 +169,7 @@ h1 {
     background-clip: text;
     margin-bottom: 1rem;
     font-family: 'Georgia', serif;
+    white-space: nowrap; /* FIX: Tambahkan ini agar teks "Welcome Ditt!" paksa 1 baris dan gak turun ke bawah */
 }
 
 h2 {
