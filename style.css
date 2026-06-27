@@ -152,10 +152,16 @@ html, body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    margin: auto 0; /* FIX: Tambahkan ini supaya konten yg pendek (kayak "Welcome") tetep rapi di tengah layar */
+    
+    /* 1. UBAH DI SINI: Kasih margin top-bottom otomatis, tapi kiri-kanan tetap 0 */
+    margin: auto 0; 
+    
+    /* 2. TAMBAHKAN INI: Biar ada jarak aman dari atas layar Android dan gak kepotong */
+    padding-top: 2rem; 
+    padding-bottom: 2rem;
+    
     gap: 1.5rem;
 }
-
 /* ==================== */
 /* TYPOGRAPHY */
 /* ==================== */
