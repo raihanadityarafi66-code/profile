@@ -206,7 +206,7 @@ function createWelcomePage() {
     page.className = 'page active';
     page.innerHTML = `
         <div class="page-content">
-            <div class="emoji-large animate-bounce">😂✌️</div>
+            <div class="emoji-large animate-bounce">😂🙏</div>
             <h1>🌸WELCOMEE!!🌸</h1>
             <p class="subtitle">Website yang dibuat karena kemaren udah ngetroll Dita HAHHAHA</p>
             <button class="btn" onclick="showPage('about')">Pencett</button>
